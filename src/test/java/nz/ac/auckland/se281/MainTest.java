@@ -17,10 +17,10 @@ import org.junit.runners.Suite.SuiteClasses;
 @SuiteClasses({
   MainTest.Task1.class, //
   MainTest.Task2.class, // Uncomment this line when to start Task 2
-  // MainTest.Task3.class, // Uncomment this line when to start Task 3
-  // MainTest.Task4.class, // Uncomment this line when to start Task 4
-  // MainTest.Task5.class, // Uncomment this line when to start Task 5
-  // MainTest.Task6.class, // Uncomment this line when to start Task 5
+  MainTest.Task3.class, // Uncomment this line when to start Task 3
+  MainTest.Task4.class, // Uncomment this line when to start Task 4
+  MainTest.Task5.class, // Uncomment this line when to start Task 5
+  MainTest.Task6.class, // Uncomment this line when to start Task 5
   // MainTest.YourTests.class, // Uncomment this line to run your own tests
 })
 public class MainTest {
@@ -1112,6 +1112,41 @@ public class MainTest {
 
     @Test
     public void TY_01_your_own_test() throws Exception {
+      // Write your own test here, in the same format as the other tests.
+      runCommands(Main.Command.HELP);
+      assertContains("[2 arguments]");
+    }
+
+    @Test
+    public void TY_041234_your_own_test() throws Exception {
+      // Write your own test here, in the same format as the other tests.
+      runCommands(Main.Command.HELP);
+      assertContains("[2 arguments]");
+    }
+
+    @Test
+    public void TY_0313214_your_own_test() throws Exception {
+      // Write your own test here, in the same format as the other tests.
+      runCommands(Main.Command.HELP);
+      assertContains("[2 arguments]");
+    }
+
+    @Test
+    public void TY_02313_your_own_test() throws Exception {
+      // Write your own test here, in the same format as the other tests.
+      runCommands(Main.Command.HELP);
+      assertContains("[2 arguments]");
+    }
+
+    @Test
+    public void TY_022222_your_own_test() throws Exception {
+      // Write your own test here, in the same format as the other tests.
+      runCommands(Main.Command.HELP);
+      assertContains("[2 arguments]");
+    }
+
+    @Test
+    public void TY_0222_your_own_test() throws Exception {
       // Write your own test here, in the same format as the other tests.
       runCommands(Main.Command.HELP);
       assertContains("[2 arguments]");

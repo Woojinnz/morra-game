@@ -7,8 +7,8 @@ public class Top implements Strategy {
   private int sum;
   private int highest;
 
-  ArrayList<Integer> humanFingers;
-  ArrayList<Integer> mostPicked;
+  private ArrayList<Integer> humanFingers;
+  private ArrayList<Integer> mostPicked;
 
   private int jarvisFingers;
 
@@ -53,7 +53,7 @@ public class Top implements Strategy {
     jarvisFingers = getHighest(getMostPicked(humanFingers));
     sum = fingers + jarvisFingers;
 
-    String[] Jarvis = {Integer.toString(fingers), Integer.toString(sum)};
-    return Jarvis;
+    String[] jarvis = {Integer.toString(fingers), Integer.toString(sum)};
+    return jarvis;
   }
 }

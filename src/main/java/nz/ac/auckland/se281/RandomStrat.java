@@ -15,8 +15,8 @@ public class RandomStrat implements Strategy {
 
     sum = Utils.getRandomNumber(fingers + 1, fingers + 5);
 
-    String[] Jarvis = {Integer.toString(fingers), Integer.toString(sum)};
+    String[] jarvis = {Integer.toString(fingers), Integer.toString(sum)};
 
-    return Jarvis;
+    return jarvis;
   }
 }

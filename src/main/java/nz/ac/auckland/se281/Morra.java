@@ -10,7 +10,7 @@ public class Morra {
   private int stratCount;
   private int humanSum;
   private boolean playing;
-  ArrayList<Integer> humanFingers = new ArrayList<Integer>();
+  private ArrayList<Integer> humanFingers = new ArrayList<Integer>();
   private int humanWins;
   private int aiWins;
   private int pointsToWin;
@@ -22,6 +22,7 @@ public class Morra {
     humanFingers.clear();
   }
 
+  // Code to create a newGame, this initalizes a lot of variables within the game.
   public void newGame(Difficulty difficulty, int pointsToWin, String[] options) {
     name = options[0];
     humanWins = 0;
@@ -49,6 +50,8 @@ public class Morra {
     return humanFingers;
   }
 
+  // play code which does the heavy work it sends the difficulty to jarvis alongside the game count
+  // and such so that jarvis can correctly output its amount of fingers and sum.
   public void play() {
 
     if (playing == true) {
@@ -71,13 +74,15 @@ public class Morra {
                 name, Integer.toString(finger), Integer.toString(sum));
 
             Jarvis jarvis = new Jarvis(this);
-            String[] AI = jarvis.play();
-            String fingerAI = AI[0];
-            String sumAI = AI[1];
+            String[] ai = jarvis.play();
+            String fingerJarvis = ai[0];
+            String sumJarvis = ai[1];
 
-            MessageCli.PRINT_INFO_HAND.printMessage("Jarvis", fingerAI, sumAI);
+            MessageCli.PRINT_INFO_HAND.printMessage("Jarvis", fingerJarvis, sumJarvis);
 
-            int victory = win(finger, Integer.parseInt(fingerAI), sum, Integer.parseInt(sumAI));
+            int victory =
+                calcuateWhoWon(
+                    finger, Integer.parseInt(fingerJarvis), sum, Integer.parseInt(sumJarvis));
 
             switch (victory) {
               case 2:
@@ -119,6 +124,8 @@ public class Morra {
     }
   }
 
+  // The showStats class, which just prints the current stats of the game and the wins and how much
+  // more to win.
   public void showStats() {
     if (playing == false) {
       MessageCli.GAME_NOT_STARTED.printMessage();
@@ -134,7 +141,7 @@ public class Morra {
     }
   }
 
-  public int win(int finger, int fingerai, int sum, int ai_sum) {
+  public int calcuateWhoWon(int finger, int fingerai, int sum, int ai_sum) {
     if (finger + fingerai == sum & finger + fingerai != ai_sum) {
       return 2;
     } else if (finger + fingerai == ai_sum & finger + fingerai != sum) {

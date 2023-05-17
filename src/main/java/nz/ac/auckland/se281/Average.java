@@ -17,7 +17,7 @@ public class Average implements Strategy {
     fingers = Utils.getRandomNumber(1, 5);
     sum = fingers + (int) avg;
 
-    String[] Jarvis = {Integer.toString(fingers), Integer.toString(sum)};
-    return Jarvis;
+    String[] jarvis = {Integer.toString(fingers), Integer.toString(sum)};
+    return jarvis;
   }
 }

@@ -1,6 +1,6 @@
 package nz.ac.auckland.se281;
 
-public class Easy implements Intensity {
+public class EasyDifficulty implements Intensity {
   private Strategy strat;
 
   @Override

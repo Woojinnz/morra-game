@@ -6,7 +6,7 @@ public class Master implements Intensity {
   private int count;
   private Strategy strat;
   private int humanSum;
-  ArrayList<Integer> humanFingers;
+  private ArrayList<Integer> humanFingers;
 
   public Master(int count, int humanSum, ArrayList<Integer> humanFingers) {
     this.count = count;
@@ -15,6 +15,7 @@ public class Master implements Intensity {
   }
 
   @Override
+  // Main code block which calcuates which strategy Jarvis should be using
   public void code() {
     if (count >= 3 && count % 2 == 0) {
       strat = new Top(humanSum, count, humanFingers);

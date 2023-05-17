@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import nz.ac.auckland.se281.Main.Difficulty;
 
 public class DifficultyFactory {
-
+// This is the Factory Design method, where the factory decides the difficulty in realtime.
   public static Intensity createLevel(
       Difficulty intensity, int count, int humanSum, ArrayList<Integer> humanFingers) {
 
@@ -12,7 +12,7 @@ public class DifficultyFactory {
     switch (intensity) {
       case EASY:
         {
-          result = new Easy();
+          result = new EasyDifficulty();
           break;
         }
 
@@ -24,7 +24,7 @@ public class DifficultyFactory {
 
       case HARD:
         {
-          result = new Hard(count, humanSum, humanFingers);
+          result = new HardDifficulty(count, humanSum, humanFingers);
           break;
         }
 

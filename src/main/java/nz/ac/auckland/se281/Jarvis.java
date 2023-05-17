@@ -1,6 +1,5 @@
 package nz.ac.auckland.se281;
 
-
 public class Jarvis {
 
   private Intensity level;

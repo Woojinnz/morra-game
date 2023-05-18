@@ -68,7 +68,7 @@ public class Morra {
         // Check if the input is valid
         if (input.matches("^\\d \\d{1,2}$")) {
 
-          String parts[] = input.split(" ", 2);
+          String[] parts = input.split(" ", 2);
           int finger = Integer.parseInt(parts[0]);
           int sum = Integer.parseInt(parts[1]);
           humanFingers.add(finger);

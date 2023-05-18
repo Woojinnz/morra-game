@@ -77,7 +77,8 @@ public class Morra {
             MessageCli.PRINT_INFO_HAND.printMessage(
                 name, Integer.toString(finger), Integer.toString(sum));
             // Create a new jarvis object
-            Jarvis jarvis = new Jarvis(this);
+            Jarvis jarvis =
+                new Jarvis(getDifficulty(), getStratCount(), getHumanSum(), getHumanFingers());
             // Get the jarvis output
             String[] ai = jarvis.play();
             String fingerJarvis = ai[0];

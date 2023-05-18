@@ -23,6 +23,7 @@ public class Utils {
     }
     return true; // no exception!
   }
+
   /**
    * @param min
    * @param max

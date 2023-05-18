@@ -1,15 +1,16 @@
 package nz.ac.auckland.se281;
 
+import java.util.ArrayList;
+import nz.ac.auckland.se281.Main.Difficulty;
+
 public class Jarvis {
 
   private Intensity level;
   private Strategy strat;
 
-  public Jarvis(Morra game) {
+  public Jarvis(Difficulty difficulty, int count, int humanSum, ArrayList<Integer> humanFingers) {
 
-    this.level =
-        DifficultyFactory.createLevel(
-            game.getDifficulty(), game.getStratCount(), game.getHumanSum(), game.getHumanFingers());
+    this.level = DifficultyFactory.createLevel(difficulty, count, humanSum, humanFingers);
 
     this.strat = level.getStrat();
   }

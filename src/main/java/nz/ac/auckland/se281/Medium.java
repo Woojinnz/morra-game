@@ -8,7 +8,6 @@ public class Medium implements Intensity {
   public Medium(int count, int humanSum) {
     this.count = count;
     this.humanSum = humanSum;
-    System.out.println(count);
   }
 
   @Override

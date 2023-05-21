@@ -3,7 +3,7 @@ package nz.ac.auckland.se281;
 import java.util.Random;
 import java.util.Scanner;
 
-// cannot change this class the only thing you can do is to add a random seed Random to obtain
+// cannto change this class the only thing you can do is to add a random seed Random to obtain
 // deterministic behaviours (see handout)
 public class Utils {
 

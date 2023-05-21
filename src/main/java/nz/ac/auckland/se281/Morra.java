@@ -16,10 +16,8 @@ public class Morra {
   private int pointsToWin;
 
   public Morra() {
-    stratCount = 0;
 
     playing = false;
-    humanFingers.clear();
   }
 
   // Code to create a newGame, this initalizes a lot of variables within the game.
@@ -27,9 +25,13 @@ public class Morra {
     name = options[0];
     humanWins = 0;
     aiWins = 0;
+
+    stratCount = 0;
+    humanFingers.clear();
+
     // Prints welcome to theplayer
     MessageCli.WELCOME_PLAYER.printMessage(name);
-    count = 1;
+    this.count = 1;
     // This is important as the difficulty decides the strategy that jarvis will use
     this.difficulty = difficulty;
     // Set playing to true

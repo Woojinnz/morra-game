@@ -6,18 +6,18 @@ import nz.ac.auckland.se281.Main.Difficulty;
 public class Jarvis {
 
   private Intensity level;
-  private Strategy strat;
 
   public Jarvis(Difficulty difficulty, int count, int humanSum, ArrayList<Integer> humanFingers) {
 
     this.level = DifficultyFactory.createLevel(difficulty, count, humanSum, humanFingers);
-
-    this.strat = level.getStrat();
   }
 
-  public void changeStrat(Morra game) {}
+  public Strategy setStrat(Intensity level) {
+    this.level = level;
+    return level.getStrat();
+  }
 
   public String[] play() {
-    return strat.decideAction();
+    return setStrat(level).decideAction();
   }
 }

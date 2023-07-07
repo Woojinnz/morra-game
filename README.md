@@ -3,6 +3,8 @@
 This project was for my Part II Software Engineering Course at the University of Auckland. <br />
 The objective was to create a sophisticated, strategy-based bot opponent for the traditional hand game, Morra.<br />
 
+An interesting part of this project personally was the addition of design patterns, I had to implement a factory & strategy design pattern so that the bot changes its strategy based on the difficulty that the user has chosen and how many rounds have been played.
+
 ## Requirements
 **OOP**: I must use Object-Oriented programming to develop a solution. <br />
 **Design Patterns**: I must implement a Factory & Strategy design pattern.<br />

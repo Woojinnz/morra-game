@@ -8,7 +8,7 @@ An interesting part of this project personally was the addition of design patter
 ## Requirements
 **OOP**: I must use Object-Oriented programming to develop a solution. <br />
 **Design Patterns**: I must implement a Factory & Strategy design pattern.<br />
-**Java Conventions**: I must follow proper java conventions and best practices such as CNAME, MNAME, VNAME,commenting and others <br />
+**Java Conventions**: I must follow proper Java conventions and best practices such as CNAME, MNAME, VNAME, commenting and others <br />
 **Time Limit**: I was given a 3-week fixed deadline.
 
 ## Testing
@@ -19,7 +19,7 @@ These tests were designed to ensure that the requirements of OOP, Design Pattern
 **Dynamic Bot Strategy:** Currently, the strategy for the bot is predetermined by the difficulty of the game and the number of games played. 
 I could implement a feature of a dynamic strategy allowing the bot to record which strategy works best against a particular player. Hence the bot can adapt its own strategy based on its knowledge, increasing the challenge. <br />
 **GUI:** The current game is solely played on the console; adding a graphical user interface would enhance the user experience.<br />
-**Highscores:** Adding a highscore feature could add a competitive element to the game.
+**Highscores:** A high score feature could add a competitive element to the game.
 
 
 **Author:** Woojin Jeon
